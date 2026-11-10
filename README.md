@@ -94,3 +94,9 @@ Integration tests use an isolated disposable MongoDB instance. They cover regist
 - [Express: production security](https://expressjs.com/advanced/best-practice-security/) — HTTPS, validation, Helmet and secure cookies.
 
 Generated resumes use a consistent Monstack template. Import preserves readable content, not the original CV's visual styling. English/Latin-script resumes are the tested export target; embedded multilingual font support would be needed for broader PDF language coverage.
+
+## Free-tier AI with Gemini
+
+Create a Gemini API key in Google AI Studio and set `GEMINI_API_KEY` on the Render MonStack service. Optionally set `GEMINI_MODEL` (default: `gemini-2.5-flash-lite`). Gemini takes priority over OpenAI when its key is present. No fallback to a paid provider occurs. Keep your Google project on the free tier without billing to avoid paid usage. Free quotas vary by account and can limit concurrent users; this is not unlimited hosting for 50 users. Google may use free-tier input/output to improve its products; review its terms before submitting personal CVs.
+
+Resume structuring and tailoring use JSON output. Market research uses Google Search and requires returned source links. The app does not save unsourced research as verified research.
